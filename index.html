@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <style>
+        /* Добавьте стили, чтобы сделать интерфейс похожим на ваш скриншот */
+    </style>
+</head>
+<body>
+    <div id="catalog">
+        <!-- Пример карточки товара -->
+        <div class="product-card">
+            <img src="product-image-url.jpg" alt="Product Image">
+            <h2>Название товара</h2>
+            <p>Цена: 1000 руб.</p>
+            <button onclick="addToCart(productId)">Добавить в корзину</button>
+        </div>
+    </div>
+    <script>
+        // JavaScript-код для добавления товара в корзину
+        function addToCart(productId) {
+            // Логика добавления товара в корзину
+            Telegram.WebApp.sendData(JSON.stringify({action: 'add_to_cart', product_id: productId}));
+        }
+    </script>
+</body>
+</html>
